@@ -1,0 +1,161 @@
+/* MADE WITH LOVE FROM CR8STEVE DESIGN...YAAAY! */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+
+:root {
+--White: hsl(0, 0%, 100%);
+--Lightgray: hsl(212, 45%, 89%);
+--Grayblue: hsl(220, 15%, 55%);
+--Darkblue: hsl(218, 44%, 22%);
+}
+
+body {
+    overflow-x: hidden;
+    background-color:var(--Lightgray);
+    box-sizing: border-box;
+    margin:0; 
+    padding: 65px 0; 
+    font-family: 'Outfit';
+}
+
+.container {
+    width: 250px;
+    margin: auto; 
+    text-align: center; 
+    padding: 10px;
+    background-color:hsl(0, 0%, 100%);
+    border: 0; 
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.08);
+    transform:scale(1);
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0ms;
+    
+}
+
+.container:hover {
+    transform:scale(1.15);
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0ms;
+}
+
+.container, #qr-div {
+    border-radius: 15px;
+}
+
+#qr-div {
+    width:100%; 
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+img[id="qr-code"] {
+    width: 100%; 
+    height: 100%;
+    transform:scale(1.1)
+    
+}
+
+h3 {
+    font-weight:700;
+    
+    font-size: 1.15rem;
+    margin: 10px 0;
+    
+}
+
+h3, .attribution, a {
+    color: var(--Darkblue);
+}
+
+p {
+    color: var(--Grayblue);
+    font-size: 0.85rem;
+}
+
+/*  The footer and attribution section styled here downward */
+footer {
+    position: static;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.attribution {
+    text-align: center; 
+    margin-top: 15px;
+    font-size: 0.6rem; 
+    background-color: var(--White);  
+    padding: 10px;
+    width: max-content; 
+    margin: 20px 0;
+    position: absolute;
+    animation-name: flow;
+    animation-duration: 3s;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+
+.attribution a {
+    text-decoration:none;
+    color: blue;
+}
+
+
+/* Animation/keyframe Properties set here for the footnote */
+@keyframes flow {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    75% { 
+        opacity: 90%
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+
+/* media query assigned to ensure the animated footnote does not apply on mobile device to improve load time */
+@media screen and (max-width:600px ){
+    .attribution {
+        text-align: center; 
+        margin-top: 15px;
+        font-size: 0.6rem;
+        background-color:unset;
+        position: unset; 
+        left: unset;    
+        animation-name: unset;
+    }
+    
+    .attribution a {
+        text-decoration:underline;
+    }
+
+    body {
+        padding-top: 100px; 
+    }
+
+    footer {
+        position:unset;
+        width: 100vw;
+        display:flex;
+        text-align: center;
+    }
+
+    .container:hover {
+        transform:scale(1);
+    }
+}
